@@ -12,6 +12,19 @@ a {
   text-decoration: none;
 }
 
+img {
+  width: 10%;
+}
+
+/* de sters later */
+.red {
+  background: red;
+}
+
+.black {
+  background: black;
+}
+
 /* use root   --numeProprietate */
 :root {
   /*section1  */
@@ -25,7 +38,7 @@ a {
 }
 /* end btn  */
 
-.d-alina-Flex {
+.d-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,4 +46,10 @@ a {
 
 .header {
   justify-content: space-around;
+}
+
+.parent-section {
+  width: 100%;
+  height: 100%;
+  background-color: purple;
 }
