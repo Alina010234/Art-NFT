@@ -5,9 +5,50 @@
   margin: 0;
   box-sizing: border-box;
 }
-li {
-  list-style: none;
+
+:root {
+  --font-standard: 1em;
+  --font-medium: 2em;
+  --font-medium_mob: 0.9em;
 }
+
+p {
+  font-size: var(--font-medium);
+}
+
+/* all screen =< max-486px */
+@media (max-width: 486px) {
+  p {
+    font-size: var(--font-medium_mob);
+  }
+}
+
+.parent-section {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #000535,
+    #09013c,
+    #18016a,
+    #210171,
+    #2d0380,
+    #350873,
+    #2a095c,
+    #300482,
+    #2b108f,
+    #370496,
+    #5f20b2,
+    #42079b
+  );
+}
+
+/* general */
+body,
+html {
+  font-family: chakra petch;
+}
+
 a {
   text-decoration: none;
 }
@@ -16,27 +57,9 @@ img {
   width: 10%;
 }
 
-/* de sters later */
-.red {
-  background: red;
+nav ul {
+  list-style: none;
 }
-
-.black {
-  background: black;
-}
-
-/* use root   --numeProprietate */
-:root {
-  /*section1  */
-}
-
-/* btn */
-.btn {
-  padding: 0.5em 1em;
-  border: 1px solid black;
-  width: fit-content;
-}
-/* end btn  */
 
 .d-flex-center {
   display: flex;
@@ -44,12 +67,54 @@ img {
   align-items: center;
 }
 
+/* end general */
+
+/* btn */
+.btn {
+  width: 10em;
+  height: 3em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: 0;
+  background-image: linear-gradient(to right top, #1366f6, #a03eef, #ee5bf3);
+  font-size: var(--font-standard);
+  color: white;
+}
+/* end btn  */
+
+/* header */
 .header {
+  position: absolute;
+  width: 100%;
+  height: 5em;
+  z-index: 2;
   justify-content: space-around;
 }
 
-.parent-section {
-  width: 100%;
-  height: 100%;
-  background-color: purple;
+.header div {
+  flex-direction: row;
 }
+
+.header nav ul {
+  display: flex;
+  gap: 30px;
+  font-size: var(--font-standard);
+}
+.header div span {
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.header div img {
+  filter: drop-shadow(3px 4px 6px black);
+  width: 100px;
+}
+
+.header nav ul li p:hover {
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #00ff33, 0 0 10px #00ff33,
+    0 0 15px #00ff33, 0 0 20px #00ff33, 0 0 25px #00ff33, 0 0 30px #00ff33;
+}
+
+/*end header */
