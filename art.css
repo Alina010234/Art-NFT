@@ -128,10 +128,6 @@ span {
   color: rgb(239, 52, 161);
 }
 
-.nft {
-  color: rgb(104, 244, 211);
-}
-
 .button {
   width: 9em;
   height: 2.5em;
@@ -196,6 +192,10 @@ span {
   background: -webkit-linear-gradient(rgb(255, 255, 250), rgb(255, 255, 250));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.nft {
+  color: rgb(104, 244, 211);
 }
 
 .small-text {
@@ -455,6 +455,7 @@ span {
   width: 9px;
   box-shadow: none;
 }
+/* end section1*/
 
 .logo-section {
   width: 100%;
