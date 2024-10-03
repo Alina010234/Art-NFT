@@ -6,28 +6,43 @@
   box-sizing: border-box;
 }
 
-:root {
+ :root {
   --font-standard: 1em;
   --font-medium1: 1.1em;
   --font-medium2: 1.2em;
   --font-medium_mob: 0.9em;
   --font-large: 3.8em;
+}
 
 p {
   font-size: var(--font-medium);
 }
 
-/* all screen =< max-486px */
-@media (max-width: 486px) {
+  /*all screen =< max-486px;*/
+ @media (max-width: 486px) {
   p {
     font-size: var(--font-medium_mob);
   }
 }
 
 .parent-section {
+  position: relative;
+  width: 100%;
+  max-width: 1462px;
+  height: 100%;
+  /* background-color: rgb(95, 57, 131); */
+  margin: 0 auto;
+  /* font-family: sa; */
   color: white;
   width: 100%;
   height: 100%;
+
+}
+
+/* general */
+body,
+html {
+  font-family: chakra petch;
   background-image: linear-gradient(
     to right top,
     #000535,
@@ -45,18 +60,8 @@ p {
   );
 }
 
-/* general */
-body,
-html {
-  font-family: chakra petch;
-}
-
 a {
   text-decoration: none;
-}
-
-img {
-  width: 10%;
 }
 
 nav ul {
@@ -69,10 +74,13 @@ nav ul {
   align-items: center;
 }
 
+span {
+  color: rgb(239, 52, 161);
+}
 /* end general */
 
-/* btn */
-.btn {
+/*button */
+ .button {
   width: 10em;
   height: 3em;
   display: flex;
@@ -84,10 +92,10 @@ nav ul {
   background-image: linear-gradient(to right top, #1366f6, #a03eef, #ee5bf3);
   font-size: var(--font-standard);
 }
-/* end btn  */
+/* end button  */
 
-/* header */
-.header {
+/*header */
+ .header {
   position: absolute;
   width: 100%;
   height: 5em;
@@ -118,10 +126,11 @@ nav ul {
     0 0 15px #00ff33, 0 0 20px #00ff33, 0 0 25px #00ff33, 0 0 30px #00ff33;
 }
 
+
 /*end header */
 
-/* section1*/
-.section1 {
+ /*section1*/
+ .section1 {
   height: 100vh;
   flex-direction: column;
   margin-top: 4em;
@@ -138,7 +147,7 @@ nav ul {
   /* border: solid black 2px; */
 }
 
-.title {
+ .title {
   /* font-family: "font-medium"; */
   font-weight: 700;
   font-size: 3.9em;
@@ -310,9 +319,6 @@ nav ul {
   clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 23%);
 }
 
-.s3-glass .glass {
-  width: 30% !important;
-}
 .Abstract-side {
   width: 60%;
   height: 100%;
@@ -330,9 +336,6 @@ nav ul {
   font-size: 1.1em;
 }
 .human-icon {
-  display: flex;
-  justify-content: start;
-  align-items: center;
   flex-direction: row;
   gap: 10px;
   font-size: 0.8em;
@@ -341,9 +344,6 @@ nav ul {
 .human-icon img {
   width: 30px;
   height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 10px;
   border-radius: 50%;
   background-color: lightblue;
@@ -410,4 +410,353 @@ nav ul {
   width: 9px;
   box-shadow: none;
 }
+
+.logo-section {
+  width: 100%;
+}
+
+.logo-filter {
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(5%) saturate(136%)
+    hue-rotate(314deg) brightness(97%) contrast(80%);
+}
+.logo-filter img {
+  width: 12%;
+  height: 100%;
+  object-fit: contain;
+}
 /*end section1*/
+
+/* section2*/
+.section2 {
+  padding: 4em 0;
+  height: auto;
+  flex-direction: column;
+}
+
+.s2container {
+  width: 100%;
+  flex-direction: column;
+}
+.s2-title {
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.dot-cercle {
+  margin-right: 80px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 10px dotted red;
+  position: relative;
+}
+
+.dot-text {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 50px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 100px;
+  gap: 5em;
+}
+
+.dot-text p {
+  width: 100%;
+  transform: translateX(-30px);
+}
+
+.s2cards-line {
+  position: relative;
+  margin-top: 3em;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.s2glass {
+  flex-direction: column;
+  object-fit: contain;
+  width: calc(100% / 5);
+  height: 400px;
+  background: rgba(248, 240, 240, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(125, 111, 111, 0.288);
+  padding: 20px;
+}
+
+.s2img {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+.s2img.card1 {
+  background-image: url(./assets/image0.jpg);
+}
+.s2img.card2 {
+  background-image: url(./assets/image04.jpg);
+}
+.s2img.card3 {
+  background-image: url(./assets/image05.jpg);
+}
+.s2img.card4 {
+  background-image: url(./assets/image03.jpg);
+}
+
+.glass-bottom {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.head {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.owned {
+  font-size: 0.7em;
+  color: rgb(226, 204, 204);
+}
+
+.blue-button {
+  width: 50px;
+  height: 30px;
+  background-color: blue;
+  border-radius: 50px;
+  font-size: 0.8em;
+}
+.middle {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.current {
+  font-size: 0.7em;
+  color: rgb(194, 177, 177);
+}
+.minifooter {
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+}
+.s2glass-button {
+  width: 40%;
+  background-color: transparent;
+  border: 2px solid rgb(165, 11, 179);
+  border-radius: 40px;
+  box-shadow: none;
+}
+.s2glass-button:hover {
+  background-color: rgb(173, 21, 112);
+}
+.view {
+  width: 50%;
+  flex-direction: row;
+  gap: 2px;
+  font-size: 0.8em;
+  color: rgb(226, 204, 204);
+}
+
+.icon img {
+  width: 80%;
+  height: 80%;
+  filter: brightness(0) invert(1);
+}
+
+.s2-footer {
+  width: 100%;
+  margin-top: 6em;
+}
+
+.s2-footer-title {
+  font-size: 2em;
+}
+img {
+  height: 50px;
+}
+.s2-text-line {
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 4em;
+}
+
+.s2-text-line p {
+  font-size: 0.8em;
+}
+.t {
+  font-size: 1.5em;
+  margin-bottom: 0.8em;
+}
+/* end section2*/
+
+/*section3*/
+.s3 {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+ .s3-t{
+  width: 100%;
+  height: 6em;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 2em;
+}
+
+.s3t1 {
+  font-size: 2em;
+}
+.s3-line {
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0.5em;
+}
+.s3-white-line {
+  width: 20em;
+  height: 0.5em;
+  border-radius: 50px;
+  background-color: white;
+}
+.s3-pink-line {
+  width: 7em;
+  height: 0.5em;
+  background-color: rgb(246, 13, 203);
+  border-radius: 50px;
+}
+.s3-01 {
+  color: rgb(243, 4, 215);
+}
+.s3-04 {
+  color: rgb(54, 92, 244);
+}
+.s2Test {
+  width: 20%;
+}
+
+.s3-glass {
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.s3-glass .glass {
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.s3-glass1 {
+  flex-direction: column;
+  padding: 1.5em;
+  clip-path: none;
+}
+.s3-glass .img-card {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.s3-glass2 {
+  flex-direction: column;
+  padding: 1.5em;
+  clip-path: none;
+}
+.s3-glass3 {
+  flex-direction: column;
+  padding: 1.5em;
+  clip-path: none;
+}
+
+.s3-glass-icon-line {
+  width: 100%;
+  justify-content: start;
+  padding: 10px;
+}
+.s3-human-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20%;
+}
+
+.created {
+  flex-direction: row;
+  margin-top: 5px;
+}
+.created p {
+  font-size: 0.8em;
+  margin-right: 5px;
+}
+.s3-title p {
+  font-size: 1em;
+  color: rgb(204, 197, 197);
+}
+.created p {
+  font-size: 1em;
+}
+
+.s3-small-icon {
+  width: 100%;
+  height: 2em;
+  justify-content: space-around;
+}
+.s3-icon {
+  height: 1.8em;
+}
+.s3-numbers {
+  width: 100%;
+  justify-content: space-between;
+  font-size: 0.7em;
+}
+.s3-numbers p {
+  padding: 0.3em;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+.s3button {
+  width: 100%;
+  justify-content: space-between;
+  gap: 2em;
+}
+.s3button1 {
+  width: 13em;
+  height: 3.6em;
+  border-radius: 10px;
+  background: rgba(233, 219, 219, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  font-size: 0.8em;
+}
+
+.s3button2 {
+  width: 14em;
+  height: 3.2em;
+  border-radius: 10px;
+  background-color: rgb(189, 33, 127);
+}
+.btn-icn {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 7px;
+  margin-bottom: 3px;
+}
+
+.s3-glass .glass {
+  width: 30% !important;
+}
