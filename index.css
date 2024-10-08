@@ -342,6 +342,7 @@ span {
   font-size: 1.1em;
 }
 .human-icon {
+  display: flex;
   flex-direction: row;
   gap: 10px;
   font-size: 0.8em;
@@ -704,15 +705,12 @@ img {
   margin-top: 5px;
 }
 .created p {
-  font-size: 0.8em;
+  font-size: 1em;
   margin-right: 5px;
 }
 .s3-title p {
   font-size: 1em;
   color: rgb(204, 197, 197);
-}
-.created p {
-  font-size: 1em;
 }
 
 .s3-small-icon {
@@ -976,6 +974,9 @@ img {
   width: 100%;
   margin-bottom: 1em;
 }
+.s5human-icon {
+  justify-content: start;
+}
 .s5human-icon img {
   width: 60px;
   height: 60px;
@@ -1009,9 +1010,7 @@ img {
 .s5row2 {
   width: 100%;
   height: auto;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: row;
 }
 .s5glass-down {
@@ -1080,3 +1079,99 @@ img {
   grid-column: 3 / span 2;
   grid-row: 2 / auto;
 }
+/*end section5*/
+
+/*section6*/
+.section6 {
+  height: fit-content;
+}
+.s6 {
+  flex-direction: column;
+  gap: 0.5em;
+}
+.s6-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6em;
+}
+.s6-dot-text {
+  height: 100%;
+  flex-direction: row;
+  margin-left: 50px;
+  font-size: 1.2em;
+  font-weight: 100px;
+  gap: 2em;
+}
+
+.s6-dot-text p {
+  white-space: pre;
+  width: 100%;
+  transform: translateX(-30px);
+  margin-left: 1.5em;
+}
+
+.s6-body {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  margin: 3em 0;
+}
+.s6-glass {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 30%;
+  height: fit-content;
+  background: rgba(248, 240, 240, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(125, 111, 111, 0.288);
+  clip-path: none;
+  padding: 10px;
+}
+.s6-mini-glass {
+  width: fit-content;
+  height: auto;
+  background: rgba(2, 255, 52, 0.3);
+  border-radius: 30px;
+  border: 2px solid rgba(2, 255, 52, 0.1);
+  z-index: 10;
+  color: greenyellow;
+  padding: 5px 10px;
+}
+.s6-mini-glass2 {
+  width: fit-content;
+  height: auto;
+  background: rgba(253, 7, 44, 0.3);
+  border-radius: 30px;
+  border: 2px solid rgba(253, 7, 44, 0.3);
+  z-index: 10;
+  color: rgb(252, 6, 6);
+  padding: 5px 10px;
+}
+.s6-human-icon img {
+  width: 5em;
+  height: 5em;
+}
+.s6-name {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+.s6-stats {
+  flex-direction: row;
+  gap: 5px;
+}
+.s6-stats p {
+  font-size: 1.2em;
+}
+.s6-stats img {
+  width: 1.5em;
+  height: 1.5em;
+}
+/*end section6*/
+
+/*section7*/
